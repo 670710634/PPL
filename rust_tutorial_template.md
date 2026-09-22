@@ -12,9 +12,6 @@
 | # | Name | Student ID | GitHub Username | Main Responsibility |
 |---|---|---|---|---|
 | 1 | `[kp]` | `[รหัส]` | `@[username]` | Concept + Code |
-k
-p
-
 | 2 | `[ชื่อ-นามสกุล]` | `[รหัส]` | `@[username]` | Code + Demo |
 | 3 | `[ชื่อ-นามสกุล]` | `[รหัส]` | `@[username]` | Rust vs Other Language + PPL |
 | 4 | `[ชื่อ-นามสกุล]` | `[รหัส]` | `@[username]` | Exercises + Common Mistakes |
