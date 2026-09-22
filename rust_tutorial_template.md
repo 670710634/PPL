@@ -1,3 +1,123 @@
+# Rust Tutorial Project — Principles of Programming Languages
+
+> **สำหรับนักศึกษา:** ใช้ไฟล์นี้เป็น Template สำหรับจัดทำบทเรียน Rust ของกลุ่ม  
+> **Topic No.:** `XX`  
+> **Topic Name:** `[ชื่อหัวข้อ]`  
+> **Group No.:** `XX`
+
+---
+
+## 1. Members
+
+| # | Name | Student ID | GitHub Username | Main Responsibility |
+|---|---|---|---|---|
+| 1 | `[kp]` | `[รหัส]` | `@[username]` | Concept + Code |
+k
+p
+
+| 2 | `[ชื่อ-นามสกุล]` | `[รหัส]` | `@[username]` | Code + Demo |
+| 3 | `[ชื่อ-นามสกุล]` | `[รหัส]` | `@[username]` | Rust vs Other Language + PPL |
+| 4 | `[ชื่อ-นามสกุล]` | `[รหัส]` | `@[username]` | Exercises + Common Mistakes |
+
+---
+
+## 2. Learning Objectives
+
+หลังจากศึกษา Topic นี้แล้ว ผู้เรียนสามารถ:
+
+1. `[อธิบายแนวคิดสำคัญได้]`
+2. `[เขียนโปรแกรม Rust ที่เกี่ยวข้องได้]`
+3. `[วิเคราะห์พฤติกรรม/กฎของภาษาได้]`
+4. `[เปรียบเทียบ Rust กับภาษาอื่นได้]`
+
+---
+
+## 3. Introduction
+
+อธิบายว่า Topic นี้คืออะไร มีความสำคัญอย่างไร และใช้แก้ปัญหาอะไรในการเขียนโปรแกรม
+
+`[เขียนเนื้อหาที่นี่]`
+
+---
+
+## 4. Key Concepts
+
+### 4.1 `[Concept 1]`
+
+**คำอธิบาย**
+
+`[อธิบายแนวคิด]`
+
+**ตัวอย่าง**
+
+```rust
+fn main() {
+    println!("Hello, Rust!");
+}
+```
+
+**Explanation**
+
+`[อธิบายว่า code ทำงานอย่างไร]`
+
+---
+
+### 4.2 `[Concept 2]`
+
+`[อธิบายแนวคิด]`
+
+```rust
+// Rust code
+```
+
+---
+
+### 4.3 `[Concept 3]`
+
+`[อธิบายแนวคิด]`
+
+```rust
+// Rust code
+```
+
+---
+
+### 4.4 `[Concept 4 — ถ้ามี]`
+
+`[อธิบายแนวคิด]`
+
+```rust
+// Rust code
+```
+
+---
+
+### 4.5 `[Concept 5 — ถ้ามี]`
+
+`[อธิบายแนวคิด]`
+
+```rust
+// Rust code
+```
+
+---
+
+## 5. Important Syntax / Rules
+
+| Syntax / Rule | Meaning | Example |
+|---|---|---|
+| `[syntax/rule]` | `[ความหมาย]` | `[ตัวอย่าง]` |
+| `[syntax/rule]` | `[ความหมาย]` | `[ตัวอย่าง]` |
+| `[syntax/rule]` | `[ความหมาย]` | `[ตัวอย่าง]` |
+
+### Important Rules
+
+1. `[กฎสำคัญข้อที่ 1]`
+2. `[กฎสำคัญข้อที่ 2]`
+3. `[กฎสำคัญข้อที่ 3]`
+
+---
+
 ## 6. Runnable Code Examples
 
 > **ข้อกำหนด:** Code ทุกตัวต้อง Compile และ Run ได้จริงก่อนนำมาใส่ในเอกสาร
