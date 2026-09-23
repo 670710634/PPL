@@ -71,7 +71,7 @@ The higher value : 30
 ---
 ### Example 3 — `lifetime ของ struct`
 
-**Purpose:** `[ต้องการสาธิตอะไร]`
+**Purpose:** `lifetime ของตัวที่ Reference ถึง field ใน struct`
 
 ```rust
 struct Card<'a> {
@@ -85,9 +85,9 @@ impl<'a> Card<'a> {
 }
 
 fn main() {
-    let i
+    let i;
     {
-    let S = "FixHe4Rt".to_string();
+    let s = "FixHe4Rt".to_string();
     let username = &S;
     i = Card { name: username };
     println!("Name : {}",i.show());
@@ -105,6 +105,6 @@ Name : FixHe4Rt
 
 **Explanation**
 
-เริ่มจากการที่เราจะสร้าง struct ชื่อ Card ขึ้นมาพร้อมตั้งชื่อ lifetime ไว้ให้ด้วยเเละในนั้นจะมี field ชื่อ name จากนั้นเราจะสร้าง impl block เพื่อเพิ่ม method ให้กับ Card พร้อมตั้งชื่อ lifetime เดียวกันกับ struct เเละข้างในจะมี method ชื่อ show เเละมี self คือตัวแทนของ instance ที่เรียก method นั้นอยู่ เเละให้ output ออกมาเป็น self.name หรือก็คือ name ที่เก็บไว้ใน struct เเละ ใน Function main เราจะกำหนดค่า s เป็น "FixHe4Rt" เเละ username คือตัวที่ Reference ถึง s เเละ สร้าง i เป็น Card ที่เก็บ name เป็น username เเละเรียกใช้ print i.show() ซึ่งRust จะส่ง i เข้าไปเป็น self โดยอัตโนมัติ ฟังก์ชันเลยเข้าถึง self.name ได้ จึงได้ค่าออกมาเป็นค่าที่เก็บไว้ใน name ของ Card ถ้าในส่วนที่คอมเม้นอยู่นำไปใช้งานเเทนจะทำให้เปิด error เพราะ lifetime ของ ตัวที่เป็น field name หมดไปเเล้วทำให้เรียกใช้ไม่ได้
+เริ่มจากการที่เราจะสร้าง struct ชื่อ Card ขึ้นมาพร้อมตั้งชื่อ lifetime ไว้ให้ด้วยเเละในนั้นจะมี field ชื่อ name จากนั้นเราจะสร้าง impl block เพื่อเพิ่ม method ให้กับ Card พร้อมตั้งชื่อ lifetime เดียวกันกับ struct เเละข้างในจะมี method ชื่อ show เเละมี self คือตัวแทนของ instance ที่เรียก method นั้นอยู่ เเละให้ output ออกมาเป็น self.name หรือก็คือ name ที่เก็บไว้ใน struct เเละ ใน Function main เราจะกำหนดค่า s เป็น "FixHe4Rt" เเละ username คือตัวที่ Reference ถึง s เเละ สร้าง i เป็น Card ที่เก็บ name เป็น username เเละเรียกใช้ print i.show() ซึ่งRust จะส่ง i เข้าไปเป็น self โดยอัตโนมัติ ฟังก์ชันเลยเข้าถึง self.name ได้ จึงได้ค่าออกมาเป็นค่าที่เก็บไว้ใน name ของ Card ถ้าในส่วนที่คอมเม้นอยู่นำไปใช้งานเเทนจะทำให้เปิด error เพราะ lifetime ของ s หมดลงทำให้ถ้าไปเรียกข้างนอก block  i.name(self.name) ที่ชี้ไปตำเเหน่งที่ s เคยอยู่จะเกิด dangling reference
 
 ---
