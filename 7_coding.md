@@ -1,10 +1,10 @@
 ## 7. Common Mistakes
 
-### Mistake 1 — `[Dangling Pointer]`
+### Mistake 1 — `Dangling Pointer`
 
 **Problem**
 
-`[เผลอส่งออกค่า Reference ของตัวที่มี Lifetime แค่ใน Function]`
+`พยายามอิงถึงค่าที่ถูก Drop ไปแล้ว`
 
 **Incorrect Code**
 
@@ -40,15 +40,15 @@ fn main()
 
 **Why?**
 
-`[เนื่องจากใน Code ที่ผิดเป็นการเข้าถึงค่า Reference ซึ่งใน Rust หากตัว Owner หลุด Scope ไปแล้วค่าที่ตัว Owner own อยู่จะถูก Drop ทิ้งเพื่อคืนพื้นที่หน่วยความจำ ทำให้เมื่อจบ dangle() ตัวแปร s ซึ่งเป็น Owner ของค่า "hi" นั้นหลุด scope ไปแล้ว โปรแกรมจึง drop ค่า "hi" ทิ้ง เมื่อ a พยายามอิงถึงค่าภายใน s จึงมองไม่เห็นอะไรทำให้ compile ไม่ผ่าน แต่ใน code ที่ถูกต้อง no_dangle() ส่งออก Ownership แทนการ reference เฉยๆ ทำให้ a เป็น Owner ของ "hi" แทน s จึงสามารถใช้งานได้ปกติ]`
+`เนื่องจากใน Code ที่ผิดเป็นการเข้าถึงค่า Reference ซึ่งใน Rust หากตัว Owner หลุด Scope ไปแล้วค่าที่ตัว Owner own อยู่จะถูก Drop ทิ้งเพื่อคืนพื้นที่หน่วยความจำ ทำให้เมื่อจบ dangle() ตัวแปร s ซึ่งเป็น Owner ของค่า "hi" นั้นหลุด scope ไปแล้ว โปรแกรมจึง drop ค่า "hi" ทิ้ง เมื่อ a พยายามอิงถึงค่าภายใน s จึงมองไม่เห็นอะไรทำให้ compile ไม่ผ่าน แต่ใน code ที่ถูกต้อง no_dangle() ส่งออก Ownership แทนการ reference เฉยๆ ทำให้ a เป็น Owner ของ "hi" แทน s จึงสามารถใช้งานได้ปกติ`
 
 ---
 
-### Mistake 2 — `[Lifetime Specifier กับ Struct]`
+### Mistake 2 — `Lifetime Specifier กับ Struct`
 
 **Problem**
 
-`[ไม่ได้กำหนด Lifetime specifier ให้ Struct ที่เก็บ Reference]`
+`ไม่ได้กำหนด Lifetime specifier ให้ Struct ที่เก็บ Reference`
 
 **Incorrect Code**
 
@@ -84,6 +84,6 @@ fn main()
 
 **Why?**
 
-`[เนื่องจาก Struct ที่เก็บค่าโดยการ Reference บางที Rust ไม่สามารถทราบได้ว่าตัวแปรที่ถูกอิงถึงนั้นจะมีอายุอยู่พอสำหรับตลอดการเรียกใช้งานของ Struct หรือไม่ เพื่อป้องกัน Dangling pointers Rust จึงบังคับให้ประกาศ Lifetime specifier ('a ในที่นี้แทนความยาวของ Lifetime หนึ่งที่ชื่อ a) เป็นตัวช่วยในตอน Compile เพื่อยืนยันว่า Lifetime ของตัวที่ถูกอิงถึงจะมีอายุยืนพอตลอดระยะเวลาที่สามารถเรียกใช้งาน Struct ได้ โดยถ้าตรวจแล้วว่า Owner อาจตายก่อน Code จะไม่ผ่านตั้งแต่ตอน Compile]`
+`เนื่องจาก Struct ที่เก็บค่าโดยการ Reference บางที Rust ไม่สามารถทราบได้ว่าตัวแปรที่ถูกอิงถึงนั้นจะมีอายุอยู่พอสำหรับตลอดเวลาที่สามารถเรียกใช้งาน Struct หรือไม่ เพื่อป้องกัน Dangling pointers Rust จึงบังคับให้ประกาศ Lifetime specifier ('a ในที่นี้แทนความยาวของ Lifetime หนึ่งที่ชื่อ a) เป็นตัวช่วยในตอน Compile เพื่อยืนยันว่า Lifetime ของตัวที่ถูกอิงถึงจะมีอายุยืนพอตลอดระยะเวลาที่สามารถเรียกใช้งาน Struct ได้ โดยถ้าตรวจแล้วว่า Owner อาจตายก่อน Code จะไม่ผ่านตั้งแต่ตอน Compile`
 
 ---
