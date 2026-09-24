@@ -19,7 +19,7 @@ fn main()
 {
     let outer;
     {
-        let inner = String::from("I'm in the block"); // inner เป็นเจ้า "I'm in the block" อยู่
+        let inner = String::from("I'm in the block"); // inner เป็นเจ้าของ "I'm in the block" อยู่
         outer = inner;   // ย้าย ownership ของ "I'm in the block" ให้ outer ซึ่งถูกประกาศอยู่ main
     }
     println!("{}", outer);
