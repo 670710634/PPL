@@ -4,28 +4,28 @@
 
 | Member | Responsibility | Time |
 |---|---|---:|
-| Member 1 | Concept + Short Code Illustration | 5 min |
-| Member 2 | Detailed Code + Live Demo | 5 min |
-| Member 3 | Rust vs Other Language + PPL Analysis | 5 min |
-| Member 4 | Exercises + Common Mistakes + Challenge | 5 min |
+| นาย ภาธร นานช้า | Concept + Short Code Illustration | 5 min |
+| นาย รัชชานนท์ เจริญรมย์ | Detailed Code + Live Demo | 5 min |
+| นาย รามิล แคใหญ่  | Rust vs Other Language + PPL Analysis | 5 min |
+| นาย วีรศิลป์ ลีนาวงศ์ | Exercises + Common Mistakes + Challenge | 5 min |
 
 ### Individual Contribution
 
 **Member 1**
 
-`[สิ่งที่รับผิดชอบ]`
+`Concept + Short Code Illustration + Presentation slide`
 
 **Member 2**
 
-`[สิ่งที่รับผิดชอบ]`
+`Detailed Code + Live Demo + Presentation slide`
 
 **Member 3**
 
-`[สิ่งที่รับผิดชอบ]`
+`Rust vs Other Language + PPL Analysis + Presentation slide`
 
 **Member 4**
 
-`[สิ่งที่รับผิดชอบ]`
+`Exercises + Common Mistakes + Challenge + Presentation slide`
 
 > สมาชิกทุกคนต้องสามารถอธิบาย Code ของกลุ่มได้ ไม่ใช่เฉพาะส่วนที่ตนเองเขียน
 
