@@ -1,9 +1,9 @@
 # Rust Tutorial Project — Principles of Programming Languages
 
 > **สำหรับนักศึกษา:** ใช้ไฟล์นี้เป็น Template สำหรับจัดทำบทเรียน Rust ของกลุ่ม  
-> **Topic No.:** `XX`  
-> **Topic Name:** `[ชื่อหัวข้อ]`  
-> **Group No.:** `XX`
+> **Topic No.:** `17`  
+> **Topic Name:** `Life times`  
+> **Group No.:** `17`
 
 ---
 
@@ -11,9 +11,9 @@
 
 | # | Name | Student ID | GitHub Username | Main Responsibility |
 |---|---|---|---|---|
-| 1 | `[kp]` | `[รหัส]` | `@[username]` | Concept + Code |
-| 2 | `[ชื่อ-นามสกุล]` | `[รหัส]` | `@[username]` | Code + Demo |
-| 3 | `[ชื่อ-นามสกุล]` | `[รหัส]` | `@[username]` | Rust vs Other Language + PPL |
-| 4 | `[ชื่อ-นามสกุล]` | `[รหัส]` | `@[username]` | Exercises + Common Mistakes |
+| 1 | `นายภาธร นานช้า` | `670710631` | `@[pathornn]` | Concept + Code |
+| 2 | `นายรัชชานนท์ เจริญรมย์` | `670710632` | `@[670710632]` | Code + Demo |
+| 3 | `นาย รามิล แคใหญ่` | `670710633` | `@[670710633]` | Rust vs Other Language + PPL |
+| 4 | `นาย วีรศิลป์ ลีนาวงศ์` | `670710634` | `@[670710634]` | Exercises + Common Mistakes |
 
 ---
