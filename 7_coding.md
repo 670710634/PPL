@@ -4,7 +4,7 @@
 
 **Problem**
 
-`พยายามอิงถึงค่าที่ถูก Drop ไปแล้ว`
+`พยายามดึงข้อมูลที่ถูก Drop ไปแล้ว`
 
 **Incorrect Code**
 
@@ -44,11 +44,11 @@ fn main()
 
 ---
 
-### Mistake 2 — `Lifetime Specifier กับ Struct`
+### Mistake 2 — `Lifetime Specifier`
 
 **Problem**
 
-`ไม่ได้กำหนด Lifetime specifier ให้ Struct ที่เก็บ Reference`
+`ไม่ได้กำหนด Lifetime specifier ให้ตัวที่จำเป็น`
 
 **Incorrect Code**
 
@@ -84,6 +84,6 @@ fn main()
 
 **Why?**
 
-`เนื่องจาก Struct ที่เก็บค่าโดยการ Reference บางที Rust ไม่สามารถทราบได้ว่าตัวแปรที่ถูกอิงถึงนั้นจะมีอายุอยู่พอสำหรับตลอดเวลาที่สามารถเรียกใช้งาน Struct หรือไม่ เพื่อป้องกัน Dangling pointers Rust จึงบังคับให้ประกาศ Lifetime specifier ('a ในที่นี้แทนความยาวของ Lifetime หนึ่งที่ชื่อ a) เป็นตัวช่วยในตอน Compile เพื่อยืนยันว่า Lifetime ของตัวที่ถูกอิงถึงจะมีอายุยืนพอตลอดระยะเวลาที่สามารถเรียกใช้งาน Struct ได้ โดยถ้าตรวจแล้วว่า Owner อาจตายก่อน Code จะไม่ผ่านตั้งแต่ตอน Compile`
+`เนื่องจาก Struct ที่เก็บค่าโดยการ Reference Rust ไม่สามารถทราบได้ว่าตัวแปรที่ถูกอิงถึงนั้นจะมีอายุอยู่พอสำหรับตลอดการเรียกใช้งานของ Struct หรือไม่ เพื่อป้องกัน Dangling pointers Rust จึงบังคับให้ประกาศ Lifetime specifier ('a ในที่นี้แทนความยาวของ Lifetime หนึ่งที่ชื่อ a) เป็นตัวช่วยในตอน Compile เพื่อยืนยันว่า Lifetime ของตัวที่ถูกอิงถึงจะมีอายุยืนพอตลอดระยะเวลาที่สามารถเรียกใช้งาน Struct ได้ โดยถ้าตรวจแล้วว่า Owner อาจตายก่อน Code จะไม่ผ่านตั้งแต่ตอน Compile`
 
 ---
