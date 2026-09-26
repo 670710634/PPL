@@ -45,11 +45,11 @@ fn higher<'a>(x: &'a i32, y: &'a i32) -> &'a i32 {
 }
 
 fn main() {
-    let X = 30;
+    let x = 30;
     let result;
     {
-        let Y = 10;
-        result = higher(&X,&Y); // ใช้ได้ใน scope นี้ 
+        let y = 10;
+        result = higher(&x,&y); // ใช้ได้ใน scope นี้ 
         println!("The higher value : {}", result);
     }
     //println!("The higher value : {}", result);
@@ -66,7 +66,7 @@ The higher value : 30
 
 เราจะสร้าง function higher ขึ้นมาก่อนเพื่อเช็คว่าค่าไหนมากกว่ากันตัว function ก็จะรับ parameter มา 2 ตัวคือ x,y จากนั้นก็เทียบค่าว่าค่าใดมากกว่าเเละส่งค่าที่มากกว่าออกไป
 
-ใน function main เราจะกำหนดค่า x = 30 เเละสร้างตัวแปล result ไว้ จากในนั้นเราจะกำหนดขอบเขตขึ้นมาเเละสร้างตัวแปล Y ขึ้นมาให้มีค่า 10 จากนั้นเราจะทำการกำหนดให้ result เก็บค่าที่เรียกใช้ function higher มาหลังจากนั้นให้ print ค่า result จะได้ค่าที่มากกว่าเป็นคำตอบ
+ใน function main เราจะกำหนดค่า x = 30 เเละสร้างตัวแปล result ไว้ จากในนั้นเราจะกำหนดขอบเขตขึ้นมาเเละสร้างตัวแปล y ขึ้นมาให้มีค่า 10 จากนั้นเราจะทำการกำหนดให้ result เก็บค่าที่เรียกใช้ function higher มาหลังจากนั้นให้ print ค่า result จะได้ค่าที่มากกว่าเป็นคำตอบ
 
 ---
 ### Example 3 — `lifetime ของ struct`
@@ -88,7 +88,7 @@ fn main() {
     let i;
     {
     let s = "FixHe4Rt".to_string();
-    let username = &S;
+    let username = &s;
     i = Card { name: username };
     println!("Name : {}",i.show());
     }
