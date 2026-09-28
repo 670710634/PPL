@@ -13,7 +13,7 @@
 
 **Member 1**
 
-`Introduction + Concept + Short Code Illustration + Important Syntax / Rules + Presentation slide`
+`Concept + Short Code Illustration + Presentation slide`
 
 **Member 2**
 
